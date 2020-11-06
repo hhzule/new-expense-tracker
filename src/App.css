@@ -1,38 +1,61 @@
-.App {
+body{
+  color: grey;
+  font-family: monospace;
+}
+
+.main{
+  /* height: 80vh; */
+  /* width: 100%; */
   text-align: center;
+  padding: 2%;
+  margin: 2%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.main > div > div{
+  align-self: center;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  text-align: center;
+  
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.display{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  display: flex;
+  padding: 2%;
+  margin: 2%;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list{
+  margin: 4% 8%;
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+}
+.expense{
+      border-top: 5px solid #00A6A4;
+      box-shadow: 0px 0px 30px 15px rgba(172, 170, 170, 0.282);  
+    min-width: 40%;
+    color: grey;
+    margin: 0 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 125%;
+    
+}
+ .income{
+      border-top: 5px solid #f2709c;
+      box-shadow: 0px 0px 30px 15px rgba(172, 170, 170, 0.282);  
+    width: 20%;
+    color: grey;
+     min-width: 40%;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 125%;
+    text-align: center;
+    
+}
+.individuallista{
+  background-color: rgb(243, 220, 220);
+}
+.individuallistb{
+  background-color: #b9ecec;
 }

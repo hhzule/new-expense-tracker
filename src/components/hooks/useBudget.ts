@@ -12,11 +12,11 @@ const addExpense = (expense: Expense) =>{
 
 };
 
-const deleteExpense = (index: number) =>{
+const deleteExpense = (id: number) =>{
     const newExpenses = [...expenses];
-    newExpenses.splice(index,1);
-    setExpenses(newExpenses);
-    console.log(newExpenses);
+   const updated = newExpenses.filter((expense)=> expense.id !== id);
+    setExpenses(updated);
+    
 
 };
 return {expenses,addExpense, deleteExpense};
