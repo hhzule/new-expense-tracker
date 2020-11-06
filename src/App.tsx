@@ -32,6 +32,7 @@ function App() {
       <Budget expenses={expenses} />
       <h1>Add Transaction</h1>
       <form onSubmit={handleSubmit}>
+        <label htmlFor='type'>'+'/'-'</label>
         <select name="type" value={newVal.type} onChange={(e) => setOBJ(e)}>
           <option value="" label="Select">
             Select
@@ -43,6 +44,8 @@ function App() {
             -
           </option>
         </select>
+    
+        <label htmlFor='value' >RS</label>
         <input
           width={100}
           placeholder="Value"
@@ -50,7 +53,8 @@ function App() {
           name="value"
           value={newVal.value}
           onChange={(e) => setOBJ(e)}
-        /><br/>
+        />
+        <label htmlFor='description' className='hidden'>Enter Description</label>
         <input
           width={100}
           placeholder="Description"
@@ -59,6 +63,7 @@ function App() {
           value={newVal.description}
           onChange={(e) => setOBJ(e)}
         />
+        <br/>
         <button type="submit">Add</button>
       </form>
       <div className='display'>

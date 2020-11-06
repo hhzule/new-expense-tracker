@@ -9,6 +9,7 @@ body{
   text-align: center;
   padding: 2%;
   margin: 2%;
+  
 }
 
 .main > div > div{
@@ -58,4 +59,10 @@ body{
 }
 .individuallistb{
   background-color: #b9ecec;
+}
+input{
+  margin: 1%;
+}
+.hidden{
+  display: none;
 }
