@@ -3,7 +3,24 @@ import "./App.css";
 import { useBudget } from "./components/hooks/useBudget";
 import Budget from "./components/Budget/Budget";
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+import firebase from './firebase';
+
+
 function App() {
+
+
+  const msg = firebase.messaging();
+  Notification.requestPermission().then(()=>{
+
+     msg.getToken().then((token)=>{
+    console.log(token)
+  }).catch((err)=>{
+    console.log(err, 'err')
+  })
+
+  }).catch(err=> console.log('err', err))
+ 
+
   const { expenses, addExpense, deleteExpense } = useBudget();
   const [newVal, setNewVal] = useState({
     type: "",
